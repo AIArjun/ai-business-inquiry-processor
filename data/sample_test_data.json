@@ -1,0 +1,79 @@
+{
+  "test_cases": [
+    {
+      "id": 1,
+      "input": {
+        "message": "Hi, my name is Erik. I'd like to book a table for 4 people this Saturday at 7pm. Also, do you have gluten-free options?"
+      },
+      "expected_output": {
+        "category": "BOOKING",
+        "customer_name": "Erik",
+        "urgency": "MEDIUM",
+        "summary": "Request to book a table for 4 people this Saturday at 7pm and inquiring about gluten-free options",
+        "draft_response": "Hello Erik, thank you for your inquiry! I will be happy to assist you with your reservation for four this Saturday at 7pm. We do offer gluten-free options on our menu. Please let me know if you would like to finalize the booking."
+      }
+    },
+    {
+      "id": 2,
+      "input": {
+        "message": "How much does the lunch menu cost? I'm planning a business lunch for 6 people."
+      },
+      "expected_output": {
+        "category": "PRICING",
+        "customer_name": "unknown",
+        "urgency": "MEDIUM",
+        "summary": "Pricing inquiry for business lunch menu for 6 people",
+        "draft_response": "Thank you for your interest in hosting a business lunch with us! Our lunch menu offers several options at competitive prices. I'd be happy to send you our current lunch menu with pricing details and discuss any special arrangements for your group of 6."
+      }
+    },
+    {
+      "id": 3,
+      "input": {
+        "message": "I'm extremely disappointed. We waited 45 minutes for our food last night and the order was wrong. My name is Sara Lindgren."
+      },
+      "expected_output": {
+        "category": "COMPLAINT",
+        "customer_name": "Sara Lindgren",
+        "urgency": "HIGH",
+        "summary": "Complaint about 45-minute wait time and incorrect order from last night",
+        "draft_response": "Dear Sara, I sincerely apologize for the unacceptable wait time and the incorrect order during your visit last night. This does not reflect our standard of service. I would like to personally look into this matter and make it right — could we arrange a call or offer you a complimentary meal on your next visit?"
+      }
+    },
+    {
+      "id": 4,
+      "input": {
+        "message": "What are your opening hours on Sunday? And do you have parking nearby?"
+      },
+      "expected_output": {
+        "category": "GENERAL",
+        "customer_name": "unknown",
+        "urgency": "LOW",
+        "summary": "Questions about Sunday opening hours and parking availability",
+        "draft_response": "Thank you for reaching out! We are open on Sundays from 12:00 to 20:00. As for parking, there is street parking available nearby and the closest parking garage is a 5-minute walk away. We look forward to welcoming you!"
+      }
+    },
+    {
+      "id": 5,
+      "input": {
+        "message": "I need to cancel my reservation for tonight. Name is Mohammed Al-Hassan, party of 8."
+      },
+      "expected_output": {
+        "category": "BOOKING",
+        "customer_name": "Mohammed Al-Hassan",
+        "urgency": "HIGH",
+        "summary": "Cancellation request for tonight's reservation, party of 8",
+        "draft_response": "Hello Mohammed, thank you for letting us know. I will process the cancellation of your reservation for tonight's party of 8 right away. If your plans change, we would be happy to rebook for another date. Thank you for the advance notice."
+      }
+    }
+  ],
+  "webhook_test": {
+    "url": "https://your-instance.app.n8n.cloud/webhook-test/your-webhook-id",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "sample_body": {
+      "message": "Hi, my name is Erik. I'd like to book a table for 4 people this Saturday at 7pm. Also, do you have gluten-free options?"
+    }
+  }
+}

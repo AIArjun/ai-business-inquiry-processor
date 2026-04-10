@@ -1,0 +1,24 @@
+# Environment variables
+.env
+.env.local
+
+# API Keys
+*.key
+*.secret
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Node
+node_modules/
+package-lock.json
+
+# Python
+__pycache__/
+*.pyc
+venv/
