@@ -146,6 +146,21 @@ Respond ONLY in this exact JSON format:
 
 ---
 
+## 🧠 Why This Works Better Than Manual Processing
+
+| Manual Process | This AI System |
+|---------------|---------------|
+| Human reads each email — slow, error-prone | AI processes instantly — **< 10 seconds** |
+| Different staff = inconsistent categorization | AI uses **fixed rules** — always consistent |
+| Inquiries get lost in shared inbox | **100% logged** with full metadata |
+| No urgency detection — first-come-first-served | AI rates urgency — **complaints surface first** |
+| Draft responses take 5-10 min each | AI drafts ready-to-send response **instantly** |
+| No data for analysis | Full **structured dataset** for business insights |
+
+The system doesn't replace your team — it **gives them superpowers**. Every inquiry arrives pre-classified, pre-summarized, with a draft response ready to review and send.
+
+---
+
 ## 📈 Classification Examples
 
 | Customer Message | Category | Urgency |
@@ -183,15 +198,19 @@ Respond ONLY in this exact JSON format:
 
 ---
 
-## 🛠️ Tech Stack
+## ⚙️ Implementation Details
 
-| Component | Technology |
-|-----------|-----------|
-| **Trigger** | Webhook (POST endpoint) |
-| **AI Engine** | OpenAI GPT-4o-mini |
-| **Orchestration** | Workflow automation platform |
-| **Data Store** | Google Sheets (expandable to any database) |
-| **Prompt Design** | Custom JSON-structured prompt engineering |
+This system is built using a combination of:
+
+| Component | Technology | Purpose |
+|-----------|-----------|---------|
+| **Trigger** | Webhook (POST endpoint) | Receives customer inquiries from any source |
+| **AI Engine** | OpenAI GPT-4o-mini | Classification, extraction, and response generation |
+| **Orchestration** | n8n (workflow automation) | Connects all components, handles data flow |
+| **Data Store** | Google Sheets | Logs all inquiries with full metadata |
+| **Prompt Design** | Custom JSON-structured prompts | Ensures consistent, machine-readable AI output |
+
+The focus is on **rapid deployment, reliability, and cost-efficiency** for real-world business use cases. The entire system can be customized for a new business in under 1 hour.
 
 ---
 
@@ -219,4 +238,4 @@ The webhook-based architecture means this system can connect to:
 
 ## 📄 License
 
-This project is proprietary. For licensing inquiries, please contact the author.
+This project is licensed under the [MIT License](LICENSE).
