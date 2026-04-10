@@ -6,6 +6,8 @@ An intelligent workflow automation system that receives customer inquiries, clas
 ![AI](https://img.shields.io/badge/AI-GPT--4o--mini-blue)
 ![Automation](https://img.shields.io/badge/Type-Workflow%20Automation-purple)
 
+> **💼 Want this for your business?** I build custom AI automation systems for businesses that handle inquiries, data processing, and workflows. → [arjunworks.se](https://arjunworks.se)
+
 ---
 
 ## 🎬 Live Demo
